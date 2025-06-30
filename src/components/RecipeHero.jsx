@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star, Undo2, Share2, Bookmark } from 'lucide-react';
 import Image1 from '../assets/images/Recipe.png'; // Replace with your images
+import { Link, useNavigate } from 'react-router-dom';
 
 const images = [Image1, Image1, Image1]; // Example image list
 
 const RecipeHero = () => {
+  const navigate = useNavigate();
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
@@ -20,8 +22,8 @@ const RecipeHero = () => {
       {/* Back Button */}
       <div className="mb-3">
         <button
-          onClick={() => window.history.back()}
-          className="flex items-center gap-1 bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded"
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-1 bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded transition-colors"
         >
           <Undo2 size={18} /> Back
         </button>

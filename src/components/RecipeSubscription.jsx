@@ -5,18 +5,18 @@ import AfricanMask1 from "../assets/images/AfricanMask1.png";
 const RecipeSubscription = () => {
   return (
     <section className="relative bg-[#FFE1D6] py-20 px-4 text-center">
-      {/* Top-left decorative mask */}
+      {/* Top-left decorative mask - Hidden on mobile, shown on sm and up */}
       <img
         src={AfricanMask}
         alt="Top left mask"
-        className="absolute top-0 left-0 w-28 md:w-36 lg:w-44 -translate-x-2 -translate-y-1/4 z-20"
+        className="hidden sm:block absolute top-0 left-0 w-28 md:w-36 lg:w-44 -translate-x-2 -translate-y-1/4 z-10"
       />
 
-      {/* Bottom-right decorative mask */}
+      {/* Bottom-right decorative mask - Hidden on mobile, shown on sm and up */}
       <img
         src={AfricanMask1}
         alt="Bottom right mask"
-        className="absolute bottom-0 right-0 w-28 md:w-36 lg:w-44 -translate-x-2 translate-y-1/3 rotate-360 z-20"
+        className="hidden sm:block absolute bottom-0 right-0 w-28 md:w-36 lg:w-44 -translate-x-2 translate-y-1/3 rotate-360 z-10"
       />
 
       {/* Text and form */}
