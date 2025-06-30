@@ -1,179 +1,6 @@
-// import React, { useState } from 'react';
-// import { ChevronLeft, ChevronRight, Heart, Clock, Users, ChefHat } from 'lucide-react';
-// import Recipe from '../assets/images/Recipe.png';
-
-// const PopularRecipesSection = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const recipes = [
-//     {
-//       id: 1,
-//       title: 'Rice with fried cheese',
-//       time: '20 min',
-//       difficulty: 'Easy',
-//       servings: '4',
-//       image: Recipe,
-//       liked: false
-//     },
-//     {
-//       id: 2,
-//       title: 'Rice with fried cheese',
-//       time: '20 min',
-//       difficulty: 'Easy',
-//       servings: '4',
-//       image: Recipe,
-//       liked: false
-//     },
-//     {
-//       id: 3,
-//       title: 'Rice with fried cheese',
-//       time: '20 min',
-//       difficulty: 'Easy',
-//       servings: '4',
-//       image: Recipe,
-//       liked: false
-//     },
-//     {
-//       id: 4,
-//       title: 'Pasta Carbonara',
-//       time: '25 min',
-//       difficulty: 'Medium',
-//       servings: '3',
-//       image:Recipe,
-//       liked: false
-//     },
-//     {
-//       id: 5,
-//       title: 'Grilled Salmon',
-//       time: '15 min',
-//       difficulty: 'Easy',
-//       servings: '2',
-//       image:Recipe,
-//       liked: false
-//     }
-//   ];
-
-//   const [likedRecipes, setLikedRecipes] = useState(new Set());
-
-//   const toggleLike = (recipeId) => {
-//     const newLiked = new Set(likedRecipes);
-//     if (newLiked.has(recipeId)) {
-//       newLiked.delete(recipeId);
-//     } else {
-//       newLiked.add(recipeId);
-//     }
-//     setLikedRecipes(newLiked);
-//   };
-
-//   const nextSlide = () => {
-//     setCurrentIndex((prevIndex) => 
-//       prevIndex === recipes.length - 3 ? 0 : prevIndex + 1
-//     );
-//   };
-
-//   const prevSlide = () => {
-//     setCurrentIndex((prevIndex) => 
-//       prevIndex === 0 ? recipes.length - 3 : prevIndex - 1
-//     );
-//   };
-
-//   return (
-//     <div className="w-full py-12 bg-white">
-//       <div className="max-w-7xl mx-auto px-4">
-//         {/* Section Header */}
-//         <h2 className="text-3xl font-bold text-gray-800 mb-8">Popular Recipes</h2>
-        
-//         {/* Carousel Container */}
-//         <div className="relative">
-//           {/* Navigation Buttons */}
-//           <button
-//             onClick={prevSlide}
-//             className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 hover:shadow-xl transition-shadow"
-//           >
-//             <ChevronLeft className="w-6 h-6 text-gray-600" />
-//           </button>
-          
-//           <button
-//             onClick={nextSlide}
-//             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg rounded-full p-2 hover:shadow-xl transition-shadow"
-//           >
-//             <ChevronRight className="w-6 h-6 text-gray-600" />
-//           </button>
-
-//           {/* Recipe Cards Container */}
-//           <div className="overflow-hidden">
-//             <div 
-//               className="flex transition-transform duration-300 ease-in-out"
-//               style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
-//             >
-//               {recipes.map((recipe) => (
-//                 <div
-//                   key={recipe.id}
-//                   className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 relative group cursor-pointer px-2"
-//                 >
-//                   {/* Recipe Card */}
-//                   <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-//                     {/* Recipe Image */}
-//                     <div className="relative h-56 bg-gradient-to-br from-orange-200 via-red-200 to-green-200 flex items-center justify-center">
-//                       <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-//                         <ChefHat className="w-16 h-16 text-gray-500" />
-//                       </div>
-                      
-//                       {/* Heart Icon */}
-//                       <button
-//                         onClick={() => toggleLike(recipe.id)}
-//                         className="absolute top-4 right-4 p-2 bg-white/30 rounded hover:bg-white transition-colors shadow"
-//                       >
-//                         <Heart 
-//                           className={`w-5 h-5 ${
-//                             likedRecipes.has(recipe.id) 
-//                               ? 'text-white fill-white' 
-//                               : 'text-gray-600'
-//                           }`} 
-//                         />
-//                       </button>
-//                     </div>
-
-//                     {/* Recipe Details Overlay */}
-//                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-//                       <h3 className="text-white text-xl font-semibold mb-3">
-//                         {recipe.title}
-//                       </h3>
-                      
-//                       {/* Recipe Meta Info */}
-//                       <div className="flex items-center gap-4 text-white/90 text-sm">
-//                         <div className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-full">
-//                           <Clock className="w-4 h-4" />
-//                           <span>{recipe.time}</span>
-//                         </div>
-                        
-//                         <div className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-full">
-//                           <ChefHat className="w-4 h-4" />
-//                           <span>{recipe.difficulty}</span>
-//                         </div>
-                        
-//                         <div className="flex items-center gap-1 bg-black/30 px-2 py-1 rounded-full">
-//                           <Users className="w-4 h-4" />
-//                           <span>{recipe.servings}</span>
-//                         </div>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default PopularRecipesSection;
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Heart, Clock, Users, ChefHat, SlidersVertical } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Heart, Clock, Users, SlidersVertical } from 'lucide-react';
 import RecipeImage from '../assets/images/Recipe.png';
 
 const PopularRecipesSection = () => {
@@ -322,12 +149,12 @@ const PopularRecipesSection = () => {
                             e.stopPropagation();
                             toggleLike(recipe.id);
                           }}
-                          className="absolute top-4 right-4 p-2 bg-white/40 rounded-full hover:bg-white transition-colors shadow"
+                          className="absolute top-4 right-4 p-2 bg-white/40 rounded-sm hover:bg-white/60 transition-colors shadow"
                         >
                           <Heart
                             className={`w-5 h-5 ${
                               likedRecipes.has(recipe.id)
-                                ? 'text-red-500 fill-red-500'
+                                ? 'text-white fill-white'
                                 : 'text-gray-600'
                             }`}
                           />
