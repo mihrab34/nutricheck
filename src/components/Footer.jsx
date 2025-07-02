@@ -13,7 +13,7 @@ const Footer = () => {
               className="text-2xl sm:text-3xl font-normal text-gray-800 mb-4" 
               style={{ fontFamily: 'Pacifico, cursive' }}
             >
-              RECIPE
+              NutriCheck
             </h2>
             <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
               Lorem Ipsum Text is a Lorem ipsum text is a dummy text dummy is a text lorem ipsum is a lorem ipsum.

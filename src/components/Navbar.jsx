@@ -72,7 +72,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl font-normal text-gray-800" style={{ fontFamily: 'Pacifico, cursive' }}>RECIPE</h1>
+            <h1 className="text-3xl font-normal text-gray-800" style={{ fontFamily: 'Pacifico, cursive' }}>NutriCheck</h1>
           </div>
           
           {/* Mobile menu button */}
