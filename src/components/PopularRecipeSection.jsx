@@ -1,54 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Heart, Clock, Users, SlidersVertical } from 'lucide-react';
-import RecipeImage from '../assets/images/Recipe.png';
+
+import recipes from '../data/recipes';
 
 const PopularRecipesSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedRecipes, setLikedRecipes] = useState(new Set());
-
-  const recipes = [
-    {
-      id: 1,
-      title: 'Rice with fried cheese',
-      time: '20 min',
-      difficulty: 'Easy',
-      servings: '4',
-      image: RecipeImage,
-    },
-    {
-      id: 2,
-      title: 'Pasta Carbonara',
-      time: '25 min',
-      difficulty: 'Medium',
-      servings: '3',
-      image: RecipeImage,
-    },
-    {
-      id: 3,
-      title: 'Grilled Salmon',
-      time: '15 min',
-      difficulty: 'Easy',
-      servings: '2',
-      image: RecipeImage,
-    },
-    {
-      id: 4,
-      title: 'Avocado Toast',
-      time: '10 min',
-      difficulty: 'Easy',
-      servings: '1',
-      image: RecipeImage,
-    },
-    {
-      id: 5,
-      title: 'Spicy Chicken Wrap',
-      time: '30 min',
-      difficulty: 'Hard',
-      servings: '2',
-      image: RecipeImage,
-    },
-  ];
 
   const toggleLike = (recipeId) => {
     const newLiked = new Set(likedRecipes);
@@ -120,7 +78,7 @@ const PopularRecipesSection = () => {
                   className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 px-2 relative group"
                 >
                   <Link 
-                    to={`/recipe/${recipe.id}`}
+                    to={`/recipe/${recipe.slug}`}
                     className="block"
                     onClick={(e) => {
                       // Prevent navigation if clicking on the heart icon

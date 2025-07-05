@@ -1,60 +1,11 @@
 import React, { useState } from 'react';
 import { Heart, Clock, Users, SlidersHorizontal } from 'lucide-react';
 import Recipe from '../assets/images/Recipe.png';
+import { Link } from 'react-router-dom';
+import recipes from '../data/recipes';
 
 const LatestRecipesSection = () => {
   const [likedRecipes, setLikedRecipes] = useState(new Set());
-
-  const recipes = [
-    {
-      id: 1,
-      title: 'Pasta Carbonara',
-      time: '25 min',
-      difficulty: 'Medium',
-      servings: '3',
-      image: Recipe,
-    },
-    {
-      id: 2,
-      title: 'Grilled Salmon',
-      time: '15 min',
-      difficulty: 'Easy',
-      servings: '2',
-      image: Recipe,
-    },
-    {
-      id: 3,
-      title: 'Vegetable Stir Fry',
-      time: '20 min',
-      difficulty: 'Easy',
-      servings: '4',
-      image: Recipe,
-    },
-    {
-      id: 4,
-      title: 'Avocado Toast',
-      time: '10 min',
-      difficulty: 'Easy',
-      servings: '1',
-      image: Recipe,
-    },
-    {
-      id: 5,
-      title: 'Spicy Chicken Wrap',
-      time: '30 min',
-      difficulty: 'Hard',
-      servings: '2',
-      image: Recipe,
-    },
-    {
-      id: 6,
-      title: 'Grilled Salmon',
-      time: '15 min',
-      difficulty: 'Easy',
-      servings: '2',
-      image: Recipe,
-    },
-  ];
 
   const toggleLike = (recipeId) => {
     const newLiked = new Set(likedRecipes);
@@ -71,7 +22,7 @@ const LatestRecipesSection = () => {
         {/* Recipe Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {recipes.map((recipe) => (
-            <div key={recipe.id} className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-96">
+            <Link key={recipe.id} to={`/recipe/${recipe.slug}`} className="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 h-96 block">
               {/* Recipe Image */}
               <div className="absolute inset-0">
                 <img
@@ -129,7 +80,7 @@ const LatestRecipesSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

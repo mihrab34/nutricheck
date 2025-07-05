@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Import Google Fonts CSS
 const fontLink = document.createElement('link');
@@ -72,7 +73,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-3xl font-normal text-gray-800" style={{ fontFamily: 'Pacifico, cursive' }}>NutriCheck</h1>
+            <Link to="/" onClick={() => handleNavClick('/')}>
+              <h1 className="text-3xl font-normal text-gray-800 hover:text-purple-600 transition-colors cursor-pointer" style={{ fontFamily: 'Pacifico, cursive' }}>NutriCheck</h1>
+            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -97,13 +100,10 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <a 
+              <Link
                 key={item.name}
-                href={item.path}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.path);
-                }}
+                to={item.path}
+                onClick={() => handleNavClick(item.path)}
                 className={`px-4 py-2 text-sm font-medium transition-colors ${
                   isActive(item.path)
                     ? 'text-purple-600 border-b-2 border-purple-600 hover:text-purple-800'
@@ -111,7 +111,7 @@ const Navbar = () => {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -134,13 +134,10 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-4 py-4 border-t border-gray-200">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.path}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.path);
-                }}
+                to={item.path}
+                onClick={() => handleNavClick(item.path)}
                 className={`px-4 py-2 text-base font-medium ${
                   isActive(item.path) 
                     ? 'text-purple-600' 
@@ -148,7 +145,7 @@ const Navbar = () => {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="flex space-x-3 pt-2">
               <button className="flex-1 px-4 py-2 text-base border-2 border-gray-600 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium">
