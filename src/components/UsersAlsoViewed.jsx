@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, Clock,  Users, SlidersVertical } from 'lucide-react';
 import Recipe from '../assets/images/Recipe.png';
+import { Link } from 'react-router-dom';
 
 const UsersAlsoViewed = () => {
   const [likedRecipes, setLikedRecipes] = useState(new Set());
@@ -8,6 +9,7 @@ const UsersAlsoViewed = () => {
   const recipes = [
     {
       id: 1,
+      slug: 'fried-rice-with-cheese',
       title: 'Rice with fried cheese',
       time: '20 min',
       difficulty: 'Easy',
@@ -16,6 +18,7 @@ const UsersAlsoViewed = () => {
     },
     {
       id: 2,
+      slug: 'pasta-carbonara',
       title: 'Pasta Carbonara',
       time: '25 min',
       difficulty: 'Medium',
@@ -24,6 +27,7 @@ const UsersAlsoViewed = () => {
     },
     {
       id: 3,
+      slug: 'vegetable-stir-fry',
       title: 'Vegetable Stir Fry',
       time: '20 min',
       difficulty: 'Easy',
@@ -47,9 +51,10 @@ const UsersAlsoViewed = () => {
         {/* Recipe Cards - Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {recipes.map((recipe) => (
-            <div 
+            <Link 
               key={recipe.id} 
-              className="h-96 rounded-2xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow duration-300 relative"
+              to={`/recipe/${recipe.slug}`}
+              className="h-96 rounded-2xl shadow-md overflow-hidden group hover:shadow-lg transition-shadow duration-300 relative block"
             >
               {/* Recipe Image */}
               <div className="absolute inset-0">
@@ -108,7 +113,7 @@ const UsersAlsoViewed = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
