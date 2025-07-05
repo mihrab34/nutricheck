@@ -9,6 +9,7 @@ import VegetableStirFry from './Pages/RecipeDetailPages/VegetableStirFry'
 import SpicyChickenWrap from './Pages/RecipeDetailPages/SpicyChickenWrap'
 import AvocadoToast from './Pages/RecipeDetailPages/AvocadoToast'
 import GrilledSalmon from './Pages/RecipeDetailPages/GrilledSalmon'
+import Collections from './Pages/Collections'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='' element={<RootLayout />}>
             <Route index={true} element={<Landing />} />
             <Route path='/recipes' element={<RecipesPage />} />
+            <Route path='/collections' element={<Collections />} />
             <Route path='/recipe/fried-rice-with-cheese' element={<FriedRiceWithCheese />} />
             <Route path='/recipe/pasta-carbonara' element={<PastaCarbonara />} />
             <Route path='/recipe/vegetable-stir-fry' element={<VegetableStirFry />} />
