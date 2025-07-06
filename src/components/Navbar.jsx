@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import MegaMenu from './MegaMenu';
 
 // Import Google Fonts CSS
 const fontLink = document.createElement('link');
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleLocationChange = () => {
@@ -41,7 +43,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Recipes', path: '/recipes' },
+    { name: 'Recipes', path: '/recipes', hasMegaMenu: true },
     { name: 'Collections', path: '/collections' }
   ];
 
@@ -55,6 +57,7 @@ const Navbar = () => {
   const handleNavClick = (path) => {
     setCurrentPath(path);
     setIsMenuOpen(false);
+    setIsMegaMenuOpen(false);
   };
 
   const toggleMenu = () => {
@@ -100,18 +103,42 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => handleNavClick(item.path)}
-                className={`px-4 py-2 text-sm font-medium transition-colors ${
-                  isActive(item.path)
-                    ? 'text-purple-600 border-b-2 border-purple-600 hover:text-purple-800'
-                    : 'text-gray-700 hover:text-purple-600 border-b-2 border-transparent'
-                }`}
-              >
-                {item.name}
-              </Link>
+              item.hasMegaMenu ? (
+                <div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => setIsMegaMenuOpen(true)}
+                  onMouseLeave={() => setIsMegaMenuOpen(false)}
+                >
+                  <Link
+                    to={item.path}
+                    onClick={() => handleNavClick(item.path)}
+                    className={`px-4 py-2 text-sm font-medium transition-colors ${
+                      isActive(item.path)
+                        ? 'text-purple-600 border-b-2 border-purple-600 hover:text-purple-800'
+                        : 'text-gray-700 hover:text-purple-600 border-b-2 border-transparent'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                  {/* Mega Menu */}
+                  <MegaMenu isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
+                </div>
+              ) : (
+                <div key={item.name} className="relative">
+                  <Link
+                    to={item.path}
+                    onClick={() => handleNavClick(item.path)}
+                    className={`px-4 py-2 text-sm font-medium transition-colors ${
+                      isActive(item.path)
+                        ? 'text-purple-600 border-b-2 border-purple-600 hover:text-purple-800'
+                        : 'text-gray-700 hover:text-purple-600 border-b-2 border-transparent'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                </div>
+              )
             ))}
           </div>
 
