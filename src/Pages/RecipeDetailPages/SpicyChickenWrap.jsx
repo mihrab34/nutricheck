@@ -9,6 +9,7 @@ const SpicyChickenWrap = () => {
   const navigate = useNavigate();
   const [isNutritionalOpen, setIsNutritionalOpen] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
+  const [isHovered, setIsHovered] = useState(false); // Track hover state
 
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
@@ -17,6 +18,15 @@ const SpicyChickenWrap = () => {
     '/src/assets/images/Recipe.png',
     '/src/assets/images/Recipe.png'
   ];
+
+  // Auto-scroll effect
+  React.useEffect(() => {
+    if (isHovered) return; // Pause auto-scroll on hover
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isHovered, images.length]);
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
@@ -93,7 +103,11 @@ const SpicyChickenWrap = () => {
         </div>
 
         {/* Image Carousel */}
-        <div className="relative mt-6 rounded-lg overflow-hidden shadow-lg">
+        <div 
+          className="relative mt-6 rounded-lg overflow-hidden shadow-lg"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <img
             src={images[currentImage]}
             alt="Recipe"
@@ -223,7 +237,7 @@ const SpicyChickenWrap = () => {
                             <img 
                               src={item.image} 
                               alt={item.name} 
-                              className="w-6 h-6 object-contain"
+                              className="w-full h-full object-cover rounded-md"
                               onError={(e) => {
                                 e.target.onerror = null;
                                 e.target.src = `https://via.placeholder.com/24/cccccc/ffffff?text=${item.name.charAt(0)}`;
