@@ -4,6 +4,17 @@ import { Clock, Users, ChevronDown, ChevronUp, SlidersVertical, ChevronLeft, Che
 import CommentsSection from '../../components/Comments';
 import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
+import Ojojo1 from "../../assets/images/Ojojo1.jpg"
+import Ojojo2 from "../../assets/images/Ojojo2.jpg"
+import Ojojo3 from "../../assets/images/Ojojo3.jpg"
+import WaterYam from "../../assets/images/waterYam.jpg";
+import Onion from "../../assets/images/Onion.jpg";
+import Pepper from "../../assets/images/Pepper.jpg";
+import Crayfish from "../../assets/images/crayfish.jpg";
+import Salt from "../../assets/images/salt.jpg";
+import Cube from "../../assets/images/cube.png";
+import Water from "../../assets/images/water.jpg";
+import Oil from "../../assets/images/oil.png";
 
 
 const Ojojo = () => {
@@ -15,9 +26,9 @@ const Ojojo = () => {
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    '/src/assets/images/Ojojo1.jpg',
-    '/src/assets/images/Ojojo2.jpg',
-    '/src/assets/images/Ojojo3.jpg'
+    Ojojo1,
+    Ojojo2,
+    Ojojo3
   ];
 
   // Auto-scroll effect
@@ -52,14 +63,14 @@ const Ojojo = () => {
   ];
 
   const ingredients = [
-    { name: '½ medium-sized water yam ', amount: '225g', image:'/src/assets/images/waterYam.jpg' },
-    { name: '1 small onion (chopped)', amount: '10g', image: '/src/assets/images/Onion.jpg' },
-    { name: '2 scotch bonnet peppers (ata rodo)', amount: '10g', image: '/src/assets/images/Pepper.jpg', note: 'Grated' },
-    { name: '1 teaspoon ground crayfish(optional)', amount: '1 tsp', image: '/src/assets/images/crayfish.jpg' },
-    { name: '½ teaspoon salt (to taste)', amount: '½ tsp', image: '/src/assets/images/salt.jpg', note: 'Sliced' },
-    { name: '½ teaspoon seasoning cube (optional)', amount: '½ tsp', image: '/src/assets/images/cube.png' },
-    { name: '1 tablespoon water (if needed)', amount: '1 tsp', image: '/src/assets/images/water.jpg' },
-    { name: 'Vegetable oil (for frying)', amount: '1 tsp', image: '/src/assets/images/oil.png' },
+    { name: '½ medium-sized water yam ', amount: '225g', image: WaterYam },
+    { name: '1 small onion (chopped)', amount: '10g', image: Onion },
+    { name: '2 scotch bonnet peppers (ata rodo)', amount: '10g', image: Pepper, note: 'Grated' },
+    { name: '1 teaspoon ground crayfish(optional)', amount: '1 tsp', image: Crayfish },
+    { name: '½ teaspoon salt (to taste)', amount: '½ tsp', image: Salt, note: 'Sliced' },
+    { name: '½ teaspoon seasoning cube (optional)', amount: '½ tsp', image: Cube },
+    { name: '1 tablespoon water (if needed)', amount: '1 tsp', image: Water },
+    { name: 'Vegetable oil (for frying)', amount: '1 tsp', image: Oil },
   ];
 
   const instructions = [
