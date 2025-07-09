@@ -1,12 +1,13 @@
-import Recipe from "../assets/images/Recipe.png";
+import Yam from "../assets/images/yamFritters.jpg";
+import Recipe from "../assets/images/Recipe.png"
 import { Link } from "react-router-dom";
 
 const recipes = [
   {
     id: 1,
-    slug: "fried-rice-with-cheese",
-    title: "Rice with Fried Cheese",
-    image: Recipe,
+    slug: "Ojojo-water-yam-fritters",
+    title: "Ojojo water yam fritters",
+    image: Yam,
     time: "20 min",
     difficulty: "Easy",
     servings: 4,

@@ -6,18 +6,28 @@ import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
 
 
-const FriedRiceWithCheese = () => {
+const Ojojo = () => {
   const navigate = useNavigate();
   const [isNutritionalOpen, setIsNutritionalOpen] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
+  const [isHovered, setIsHovered] = useState(false); // Track hover state
 
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png'
+    '/src/assets/images/Ojojo1.jpg',
+    '/src/assets/images/Ojojo2.jpg',
+    '/src/assets/images/Ojojo3.jpg'
   ];
+
+  // Auto-scroll effect
+  React.useEffect(() => {
+    if (isHovered) return; // Pause auto-scroll on hover
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isHovered, images.length]);
 
   const nextImage = () => {
     setCurrentImage((prev) => (prev + 1) % images.length);
@@ -42,21 +52,22 @@ const FriedRiceWithCheese = () => {
   ];
 
   const ingredients = [
-    { name: 'Rice', amount: '225g', image: '/images/rice.png' },
-    { name: 'Olive Oil', amount: '60g', image: '/images/oil.png' },
-    { name: 'Cheese', amount: '300g', image: '/images/cheese.png', note: 'Grated' },
-    { name: 'Salt', amount: '1/2 tsp', image: '/images/salt.png' },
-    { name: 'Onion', amount: '4 Pieces', image: '/images/onion.png', note: 'Sliced' },
-    { name: 'Tomato', amount: '3 Pieces', image: '/images/tomato.png' },
-    { name: 'Red Pepper', amount: '1/2 tsp', image: '/images/pepper.png' },
+    { name: '½ medium-sized water yam ', amount: '225g', image:'/src/assets/images/waterYam.jpg' },
+    { name: '1 small onion (chopped)', amount: '10g', image: '/src/assets/images/Onion.jpg' },
+    { name: '2 scotch bonnet peppers (ata rodo)', amount: '10g', image: '/src/assets/images/Pepper.jpg', note: 'Grated' },
+    { name: '1 teaspoon ground crayfish(optional)', amount: '1 tsp', image: '/src/assets/images/crayfish.jpg' },
+    { name: '½ teaspoon salt (to taste)', amount: '½ tsp', image: '/src/assets/images/salt.jpg', note: 'Sliced' },
+    { name: '½ teaspoon seasoning cube (optional)', amount: '½ tsp', image: '/src/assets/images/cube.png' },
+    { name: '1 tablespoon water (if needed)', amount: '1 tsp', image: '/src/assets/images/water.jpg' },
+    { name: 'Vegetable oil (for frying)', amount: '1 tsp', image: '/src/assets/images/oil.png' },
   ];
 
   const instructions = [
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
+    'Peel and grate the water yam. Use a grater with small holes to achieve a smooth consistency. Mix the ingredients and place the grated water yam in a bowl. ',
+    'Add chopped onions, scotch bonnet peppers, crayfish, salt, and seasoning cube. Stir well to combine. If the batter is too thick, add a little water for a softer consistency.',
+    ' into a deep pan and heat over medium heat, Scoop small portions of the batter using a spoon and carefully drop them into the hot oil. ',
+    'Fry until golden brown, flipping occasionally to ensure even cooking.Drain and serve',
+    'Remove the fritters and place them on a paper towel to drain excess oil.',
   ];
 
   return (
@@ -76,7 +87,7 @@ const FriedRiceWithCheese = () => {
         {/* Title + Rating + Buttons */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Rice with Fried Cheese</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Ojojo( water yam fritters)</h1>
             <div className="flex items-center bg-gray-100 px-2 py-1 rounded-full">
               <Star className="text-yellow-500" size={18} />
               <span className="ml-1 font-medium">4.5</span>
@@ -94,7 +105,11 @@ const FriedRiceWithCheese = () => {
         </div>
 
         {/* Image Carousel */}
-        <div className="relative mt-6 rounded-lg overflow-hidden shadow-lg">
+        <div 
+          className="relative mt-6 rounded-lg overflow-hidden shadow-lg"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <img
             src={images[currentImage]}
             alt="Recipe"
@@ -224,7 +239,7 @@ const FriedRiceWithCheese = () => {
                             <img 
                               src={item.image} 
                               alt={item.name} 
-                              className="w-6 h-6 object-contain"
+                              className="w-full h-full object-cover rounded-md"
                               onError={(e) => {
                                 e.target.onerror = null;
                                 e.target.src = `https://via.placeholder.com/24/cccccc/ffffff?text=${item.name.charAt(0)}`;
@@ -288,4 +303,4 @@ const FriedRiceWithCheese = () => {
   );
 };
 
-export default FriedRiceWithCheese;
+export default Ojojo;
