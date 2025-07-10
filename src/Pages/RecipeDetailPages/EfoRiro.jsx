@@ -4,9 +4,21 @@ import { Clock, Users, ChevronDown, ChevronUp, SlidersVertical, ChevronLeft, Che
 import CommentsSection from '../../components/Comments';
 import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
+import riro from "../../assets/images/riro.jpg"
+import riro1 from "../../assets/images/riro1.jpg"
+import riro2 from "../../assets/images/riro2.jpg"
+import PalmOil from "../../assets/images/PalmOil.jpg";
+import efoTete from "../../assets/images/efoTete.jpg";
+import pepperMix from "../../assets/images/pepperMix.jpg";
+import Onion from "../../assets/images/Onion.jpg";
+import locustBeans from "../../assets/images/locustBeans.jpg";
+import AssortedMeat from "../../assets/images/AssortedMeat.jpg";
+import DryFish from "../../assets/images/DryFish.jpg";
+import Cray from "../../assets/images/Cray.jpg";
+import cube from "../../assets/images/cube.png"
 
 
-const PastaCarbonara = () => {
+const EfoRiro = () => {
   const navigate = useNavigate();
   const [isNutritionalOpen, setIsNutritionalOpen] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
@@ -15,9 +27,9 @@ const PastaCarbonara = () => {
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png'
+    riro,
+    riro1,
+    riro2
   ];
 
   // Auto-scroll effect
@@ -52,21 +64,27 @@ const PastaCarbonara = () => {
   ];
 
   const ingredients = [
-    { name: 'Rice', amount: '225g', image: '/images/rice.png' },
-    { name: 'Olive Oil', amount: '60g', image: '/images/oil.png' },
-    { name: 'Cheese', amount: '300g', image: '/images/cheese.png', note: 'Grated' },
-    { name: 'Salt', amount: '1/2 tsp', image: '/images/salt.png' },
-    { name: 'Onion', amount: '4 Pieces', image: '/images/onion.png', note: 'Sliced' },
-    { name: 'Tomato', amount: '3 Pieces', image: '/images/tomato.png' },
-    { name: 'Red Pepper', amount: '1/2 tsp', image: '/images/pepper.png' },
+    { name: 'Efo Tete (African Spinach)  or Efo Shoko (Lagos Spinach', amount: '225g', image: efoTete },
+    { name: 'Palm oil', amount: '10g', image: PalmOil},
+    { name: 'Pepper mix: Blend of tomatoes, red bell peppers and scotch bonnet peppers', amount: '10g', image: pepperMix, note: 'Grated' },
+    { name: 'Onions', amount: '10 g', image: Onion    },
+    { name: 'Locust beans (Iru) : Yoruba flavor', amount: '10 g', image: locustBeans, note: 'Sliced' },
+    { name: 'Assorted meats – Beef, Ponmo, Shaki, Goat meat, etc', amount: '10 g', image: AssortedMeat },
+    { name: 'Dried fish or smoked fish (optional)', amount: '10 g', image:  DryFish },
+    { name: 'Vegetable oil (for frying)', amount: '1 tsp', image: Cray },
+    { name: 'Seasoning cubes & salt.', amount: '1 tsp', image: cube },
   ];
 
   const instructions = [
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
+    'Efo Riro is a traditional Yoruba vegetable soup from Western Nigeria, known for its rich flavors and nutritional value. The name "Efo Riro" means "stirred vegetables" in Yoruba. It is commonly enjoyed with swallows like Amala, Fufu, Pounded Yam, and Eba.',
+    'Wash and Chop Vegetables – Rinse the spinach and cut into smaller pieces.',
+    'Blend Pepper Mix – Blend tomatoes, bell peppers, scotch bonnet, and onions.',
+    'Cook the Assorted Meat – Season and boil the meat until tender.',
+    'Fry the Pepper Mix – Heat palm oil in a pot, add onions, and fry the blended pepper.',
+    'Add Locust Beans & Crayfish – Stir well to enhance flavor.',
+    'Add Meat and Fish – Let it absorb the flavor of the sauce.',
+    'Stir in Vegetables – Add chopped spinach, stir, and allow it to simmer for a few minutes.',
+    'Serve Hot – Enjoy with Amala, Eba, Fufu, or Pounded Yam.',
   ];
 
   return (
@@ -86,7 +104,7 @@ const PastaCarbonara = () => {
         {/* Title + Rating + Buttons */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Pasta Carbonara</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Efo riro</h1>
             <div className="flex items-center bg-gray-100 px-2 py-1 rounded-full">
               <Star className="text-yellow-500" size={18} />
               <span className="ml-1 font-medium">4.5</span>
@@ -302,4 +320,4 @@ const PastaCarbonara = () => {
   );
 };
 
-export default PastaCarbonara;
+export default EfoRiro;

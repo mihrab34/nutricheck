@@ -1,5 +1,6 @@
 import Yam from "../assets/images/yamFritters.jpg";
 import Recipe from "../assets/images/Recipe.png"
+import riro from "../assets/images/riro.jpg"
 import { Link } from "react-router-dom";
 
 const recipes = [
@@ -15,9 +16,9 @@ const recipes = [
   },
   {
     id: 2,
-    slug: "pasta-carbonara",
-    title: "Pasta Carbonara",
-    image: Recipe,
+    slug: "efo-riro",
+    title: "efo riro",
+    image: riro,
     time: "30 min",
     difficulty: "Medium",
     servings: 2,
