@@ -3,13 +3,13 @@ import './App.css'
 import RootLayout from './layouts/RootLayout'
 import Landing from './Pages/Landing'
 import RecipesPage from './Pages/RecipesPage'
-import PastaCarbonara from './Pages/RecipeDetailPages/PastaCarbonara'
 import VegetableStirFry from './Pages/RecipeDetailPages/VegetableStirFry'
 import SpicyChickenWrap from './Pages/RecipeDetailPages/SpicyChickenWrap'
 import AvocadoToast from './Pages/RecipeDetailPages/AvocadoToast'
 import GrilledSalmon from './Pages/RecipeDetailPages/GrilledSalmon'
 import Collections from './Pages/Collections'
 import Ojojo from './Pages/RecipeDetailPages/Ojojo'
+import EfoRiro from './Pages/RecipeDetailPages/efoRiro'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path='/recipes' element={<RecipesPage />} />
             <Route path='/collections' element={<Collections />} />
             <Route path='/recipe/Ojojo-water-yam-fritters' element={<Ojojo />} />
-            <Route path='/recipe/pasta-carbonara' element={<PastaCarbonara />} />
+            <Route path='/recipe/efo-riro' element={<EfoRiro />} />
             <Route path='/recipe/vegetable-stir-fry' element={<VegetableStirFry />} />
             <Route path='/recipe/spicy-chicken-wrap' element={<SpicyChickenWrap />} />
             <Route path='/recipe/avocado-toast' element={<AvocadoToast />} />
