@@ -26,8 +26,8 @@ const recipes = [
   },
   {
     id: 3,
-    slug: "vegetable-stir-fry",
-    title: "Vegetable Stir Fry",
+    slug: "amala",
+    title: "amala",
     image: Recipe,
     time: "25 min",
     difficulty: "Easy",
