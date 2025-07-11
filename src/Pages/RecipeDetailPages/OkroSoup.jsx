@@ -4,8 +4,14 @@ import { Clock, Users, ChevronDown, ChevronUp, SlidersVertical, ChevronLeft, Che
 import CommentsSection from '../../components/Comments';
 import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
+import Okro1 from "../../assets/images/Okro1.jpg"
+import Okro2 from "../../assets/images/Okro2.jpg"
+import Okro3 from "../../assets/images/Okro3.jpg"
+import freshOkro from "../../assets/images/freshOkro.jpg";
+import GroundedCrayfish from "../../assets/images/GroundedCrayfish.jpg";
+import cube from "../../assets/images/cube.png"
 
-const AvocadoToast = () => {
+const OkroSoup = () => {
   const navigate = useNavigate();
   const [isNutritionalOpen, setIsNutritionalOpen] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
@@ -14,9 +20,9 @@ const AvocadoToast = () => {
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png'
+    Okro1,
+    Okro2,
+    Okro3,
   ];
 
   // Auto-scroll effect
@@ -51,21 +57,16 @@ const AvocadoToast = () => {
   ];
 
   const ingredients = [
-    { name: 'Rice', amount: '225g', image: '/images/rice.png' },
-    { name: 'Olive Oil', amount: '60g', image: '/images/oil.png' },
-    { name: 'Cheese', amount: '300g', image: '/images/cheese.png', note: 'Grated' },
-    { name: 'Salt', amount: '1/2 tsp', image: '/images/salt.png' },
-    { name: 'Onion', amount: '4 Pieces', image: '/images/onion.png', note: 'Sliced' },
-    { name: 'Tomato', amount: '3 Pieces', image: '/images/tomato.png' },
-    { name: 'Red Pepper', amount: '1/2 tsp', image: '/images/pepper.png' },
+    { name: '2 cups fresh okro | 1½ cups water(stock)', amount: '225g', image: freshOkro },
+    { name: '1 tablespoon ground crayfish. ½ teaspoon salt (to taste)', amount: '½ tsp', image: GroundedCrayfish },
+    { name: '1 teaspoon seasoning powder or cube.', amount: '1 tsp', image: cube },
+   
   ];
 
   const instructions = [
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
+    'Boil water or stock in a pot and add ground crayfish, locust beans, seasoning, and salt.',
+    'Stir in the grated or chopped okro and cook for about 3-5 minutes while stirring continuously to maintain its slimy texture.',
+    'Stir for 1-2 minutes. Serve hot with swallow of choice.',
   ];
 
   return (
@@ -85,7 +86,7 @@ const AvocadoToast = () => {
         {/* Title + Rating + Buttons */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Avocado Toast</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Ila(plain Okro soup)</h1>
             <div className="flex items-center bg-gray-100 px-2 py-1 rounded-full">
               <Star className="text-yellow-500" size={18} />
               <span className="ml-1 font-medium">4.5</span>
@@ -301,4 +302,4 @@ const AvocadoToast = () => {
   );
 };
 
-export default AvocadoToast;
+export default OkroSoup;
