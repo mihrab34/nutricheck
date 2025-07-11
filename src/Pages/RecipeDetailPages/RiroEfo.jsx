@@ -18,7 +18,7 @@ import Cray from "../../assets/images/Cray.jpg";
 import cube from "../../assets/images/cube.png"
 
 
-const EfoRiro = () => {
+const RiroEfo = () => {
   const navigate = useNavigate();
   const [isNutritionalOpen, setIsNutritionalOpen] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
@@ -320,4 +320,4 @@ const EfoRiro = () => {
   );
 };
 
-export default EfoRiro;
+export default RiroEfo;

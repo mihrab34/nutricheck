@@ -8,9 +8,8 @@ import AvocadoToast from './Pages/RecipeDetailPages/AvocadoToast'
 import GrilledSalmon from './Pages/RecipeDetailPages/GrilledSalmon'
 import Collections from './Pages/Collections'
 import Ojojo from './Pages/RecipeDetailPages/Ojojo'
-
 import Amala from './Pages/RecipeDetailPages/Amala'
-import EfoRiro from './Pages/RecipeDetailPages/efoRiro'
+import RiroEfo from './Pages/RecipeDetailPages/RiroEfo'
 
 function App() {
   return (
@@ -22,7 +21,7 @@ function App() {
             <Route path='/recipes' element={<RecipesPage />} />
             <Route path='/collections' element={<Collections />} />
             <Route path='/recipe/Ojojo-water-yam-fritters' element={<Ojojo />} />
-            <Route path='/recipe/efo-riro' element={<EfoRiro />} />
+            <Route path='/recipe/efo-riro' element={<RiroEfo />} />
             <Route path='/recipe/amala' element={<Amala />} />
             <Route path='/recipe/spicy-chicken-wrap' element={<SpicyChickenWrap />} />
             <Route path='/recipe/avocado-toast' element={<AvocadoToast />} />
