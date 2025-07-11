@@ -9,7 +9,7 @@ import Amala2 from "../../assets/images/Amala2.jpg"
 import Amala3 from "../../assets/images/Amala3.jpg"
 import yamflour from "../../assets/images/yamflour.jpg";
 
-import Water from "../../assets/images/water.jpg";
+import TapWater from "../../assets/images/TapWater.jpg";
 
 
 const Amala = () => {
@@ -59,7 +59,7 @@ const Amala = () => {
 
   const ingredients = [
     { name: '½ medium-sized water yam ', amount: '225g', image: yamflour },
-    { name: '1 tablespoon water (if needed)', amount: '1 tsp', image: Water },
+    { name: 'water for mixing', amount: '2 cups', image: TapWater },
    
   ];
 

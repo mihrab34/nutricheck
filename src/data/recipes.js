@@ -2,6 +2,7 @@ import Yam from "../assets/images/yamFritters.jpg";
 import Recipe from "../assets/images/Recipe.png"
 import riro from "../assets/images/riro.jpg"
 import Amala3 from "../assets/images/Amala3.jpg"
+import Ogbono1 from "../assets/images/Ogbono1.jpg"
 import { Link } from "react-router-dom";
 
 const recipes = [
@@ -37,9 +38,9 @@ const recipes = [
   },
   {
     id: 4,
-    slug: "spicy-chicken-wrap",
-    title: "Spicy Chicken Wrap",
-    image: Recipe,
+    slug: "ogbono-soup",
+    title: "ogbono soup",
+    image: Ogbono1,
     time: "25 min",
     difficulty: "Easy",
     servings: 3,

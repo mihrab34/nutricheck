@@ -4,8 +4,27 @@ import { Clock, Users, ChevronDown, ChevronUp, SlidersVertical, ChevronLeft, Che
 import CommentsSection from '../../components/Comments';
 import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
+import Ogbono1 from "../../assets/images/Ogbono1.jpg"
+import Ogbono2 from "../../assets/images/Ogbono2.jpg"
+import Ogbono3 from "../../assets/images/Ogbono3.jpg"
+import AssortedMeat from "../../assets/images/AssortedMeat.jpg";
+import ogbono from "../../assets/images/ogbono.jpg";
+import OilSpoon from "../../assets/images/OilSpoon.jpg";
+import UguLeaves from "../../assets/images/UguLeaves.jpg";
+import Basil from "../../assets/images/Basil.jpg";
+import GroundCrayfish from "../../assets/images/GroundCrayfish.jpg";
+import Prawns from "../../assets/images/Prawns.jpg";
+import smokedCatfish from "../../assets/images/smokedCatfish.jpg";
+import DriedStockfish from "../../assets/images/DriedStockfish.jpg";
+import Pepper from "../../assets/images/Pepper.jpg";
+import Onion from "../../assets/images/Onion.jpg"
+import CayennePepper from "../../assets/images/CayennePepper.jpg"
+import cube from "../../assets/images/cube.png"
+import locustBeans from "../../assets/images/locustBeans.jpg"
+import salt from "../../assets/images/salt.jpg"
 
-const SpicyChickenWrap = () => {
+
+const OgbonoSoup = () => {
   const navigate = useNavigate();
   const [isNutritionalOpen, setIsNutritionalOpen] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
@@ -14,10 +33,9 @@ const SpicyChickenWrap = () => {
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png'
-  ];
+    Ogbono1,
+    Ogbono2,
+    Ogbono3  ];
 
   // Auto-scroll effect
   React.useEffect(() => {
@@ -51,21 +69,41 @@ const SpicyChickenWrap = () => {
   ];
 
   const ingredients = [
-    { name: 'Rice', amount: '225g', image: '/images/rice.png' },
-    { name: 'Olive Oil', amount: '60g', image: '/images/oil.png' },
-    { name: 'Cheese', amount: '300g', image: '/images/cheese.png', note: 'Grated' },
-    { name: 'Salt', amount: '1/2 tsp', image: '/images/salt.png' },
-    { name: 'Onion', amount: '4 Pieces', image: '/images/onion.png', note: 'Sliced' },
-    { name: 'Tomato', amount: '3 Pieces', image: '/images/tomato.png' },
-    { name: 'Red Pepper', amount: '1/2 tsp', image: '/images/pepper.png' },
+    { name: 'Assorted meats (Ponmo, Shaki, Bokoto, Beef, Goat meat and Offals (internal organs)', amount: '225g', image: AssortedMeat },
+    { name: '1 Cup Ogbono Seeds', amount: '1 cup', image: ogbono },
+    { name: '2 Cooking Spoons Palm Oil', amount: '10g', image: OilSpoon },
+    { name: 'Ugu Leaves', amount: 'a bunch', image: UguLeaves },
+    { name: 'Efinrin/ Basil leaves (Optional)', amount: 'a bunch', image: Basil},
+    { name: '3 Tablespoons Ground Crayfish', amount: '½ tsp', image: GroundCrayfish },
+    { name: '1/2 Cup Smoked/ Raw King Prawns', amount: '½ cup', image: Prawns },
+    { name: 'Smoked Catfish', amount: '1 tsp', image: smokedCatfish },
+    { name: 'Dried Stockfish', amount: '1 tsp', image: DriedStockfish },
+    { name: '1 or 2 Scotch Bonnet (Optional)', amount: '2 fingers', image: Pepper },
+    { name: '1 Red Onion chopped', amount: '5 g', image: Onion },
+    { name: 'Tablespoon Cayenne Pepper (Atagungun)', amount: '5 g', image: CayennePepper },
+    { name: 'Bouillon cubes', amount: '5 g', image: cube },
+    { name: '2 Tablespoons Iru (Locust Beans)', amount: '5 g', image: locustBeans },
+    { name: 'Salt to taste', amount: '1 tsp', image: salt },
   ];
 
   const instructions = [
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
+    'Grind your Ogbono seeds finely and set aside Pick and wash the Ugu leaves with hot water to rid if of dirt. Be careful not to soak it in hot water for too long.',
+    'If you’re using dry Basil leaves/Efinrin, soak in hot water for 5 minutes to soften and remove all traces of dirt',
+    'Wash all the meats you’ll be using thoroughly to rid them of blood and dirt.',
+    'Then, set a big pot on a hob on low heat, add in the tougher meats,  the Shaki, Cow leg and ',
+    'onmo, add the sliced onions and salt to taste.',
+    ' Cover and let it simmer on low heat for 20 minutes. This helps to release the meats’ natural juices.',
+    'After twenty minutes, turn up the heat to medium, add more water to cover the meats, cover and let this cook till tender, not soft, just tender.',
+    'This should take around half an hour, you can save time by using a pressure cooker.',
+    'When it’s tender, add the softer meats, in this case, the goat meat, Also add the stock fish, continue to cook till meats are soft.',
+    'Now, add the cooked offals (if you’re using any) and smoked catfish when the meats are cooked.',
+    'After 5-6 minutes, take out the stockfish and shred to smaller pieces, now add the chopped peppers.',
+    'Now add the ground pepper, Iru, ground crayfish, both the raw and smoked king prawns.',
+    'Now add the palm oil, cook for another 3-5 minutes to allow the palm oil melt further and be well combined with the meats.',
+    'Then,  add the Ogbono gradually, stir till fully dissolved ( the Soup should begin to draw at this time)',
+    'Combine thoroughly and leave  to cook for at least 15 minutes, stir occasionally.',
+    'Now add the washed Ugu leaves, turn the heat to low at this time.Stir and  combine.',
+    'Now add the Basil leaves/ Efinrin, let it cook for 3-5 minutes, then switch off the heat and let the soup simmer with the residual heat.'
   ];
 
   return (
@@ -85,7 +123,7 @@ const SpicyChickenWrap = () => {
         {/* Title + Rating + Buttons */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Spicy Chicken Wrap</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Ogbono Soup </h1>
             <div className="flex items-center bg-gray-100 px-2 py-1 rounded-full">
               <Star className="text-yellow-500" size={18} />
               <span className="ml-1 font-medium">4.5</span>
@@ -301,4 +339,4 @@ const SpicyChickenWrap = () => {
   );
 };
 
-export default SpicyChickenWrap;
+export default OgbonoSoup ;

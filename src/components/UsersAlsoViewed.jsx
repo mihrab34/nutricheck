@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Heart, Clock,  Users, SlidersVertical } from 'lucide-react';
 import Recipe from '../assets/images/Recipe.png';
+import Yam from "../assets/images/yamFritters.jpg";
+import riro from "../assets/images/riro.jpg"
+import Amala3 from "../assets/images/Amala3.jpg"
 import { Link } from 'react-router-dom';
 
 const UsersAlsoViewed = () => {
@@ -9,30 +12,30 @@ const UsersAlsoViewed = () => {
   const recipes = [
     {
       id: 1,
-      slug: 'fried-rice-with-cheese',
-      title: 'Rice with fried cheese',
+      slug: 'Ojojo-water-yam-fritters',
+      title: 'Ojojo water yam fritters',
       time: '20 min',
       difficulty: 'Easy',
       servings: '4',
-      image: Recipe,
+      image: Yam,
     },
     {
       id: 2,
-      slug: 'pasta-carbonara',
-      title: 'Pasta Carbonara',
+      slug: 'efo-riro',
+      title: 'efo riro',
       time: '25 min',
       difficulty: 'Medium',
       servings: '3',
-      image: Recipe,
+      image: riro,
     },
     {
       id: 3,
-      slug: 'vegetable-stir-fry',
-      title: 'Vegetable Stir Fry',
+      slug: 'amala',
+      title: 'amala',
       time: '20 min',
       difficulty: 'Easy',
       servings: '4',
-      image: Recipe,
+      image: Amala3,
     },
   ];
 
