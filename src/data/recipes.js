@@ -4,6 +4,7 @@ import riro from "../assets/images/riro.jpg"
 import Amala3 from "../assets/images/Amala3.jpg"
 import Ogbono1 from "../assets/images/Ogbono1.jpg"
 import Okro2 from "../assets/images/Okro2.jpg"
+import Ewedu3 from "../assets/images/Ewedu3.jpg"
 import { Link } from "react-router-dom";
 
 const recipes = [
@@ -59,9 +60,9 @@ const recipes = [
   },
   {
     id: 6,
-    slug: "grilled-salmon",
-    title: "Grilled Salmon",
-    image: Recipe,
+    slug: "ewedu",
+    title: "ewedu",
+    image: Ewedu3,
     time: "25 min",
     difficulty: "Easy",
     servings: 3,

@@ -1,4 +1,5 @@
 import React from "react";
+import { X } from 'lucide-react';
 import "./MegaMenu.css"; // For custom pattern if needed
 import { Link } from "react-router-dom";
 
@@ -28,6 +29,14 @@ const MegaMenu = ({ isOpen, onClose }) => {
       />
       {/* Mega Menu */}
       <div className="fixed top-20 left-1/2 transform -translate-x-1/2 w-full max-w-4xl z-50 font-sans">
+        {/* Close Button */}
+        <button
+          className="absolute top-4 right-4 z-50 bg-white rounded-full p-2 shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          onClick={onClose}
+          aria-label="Close menu"
+        >
+          <X size={22} />
+        </button>
         <div className="flex rounded-xl shadow-xl overflow-visible">
           {/* Left: Special Diets */}
           <div className="bg-[#2d3561] text-white p-8 w-1/3 flex flex-col rounded-l-xl">
