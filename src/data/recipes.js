@@ -1,6 +1,7 @@
 import Yam from "../assets/images/yamFritters.jpg";
 import Recipe from "../assets/images/Recipe.png"
 import riro from "../assets/images/riro.jpg"
+import Amala3 from "../assets/images/Amala3.jpg"
 import { Link } from "react-router-dom";
 
 const recipes = [
@@ -28,7 +29,7 @@ const recipes = [
     id: 3,
     slug: "amala",
     title: "amala",
-    image: Recipe,
+    image: Amala3,
     time: "25 min",
     difficulty: "Easy",
     servings: 3,

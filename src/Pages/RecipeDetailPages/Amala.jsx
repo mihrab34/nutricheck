@@ -4,17 +4,12 @@ import { Clock, Users, ChevronDown, ChevronUp, SlidersVertical, ChevronLeft, Che
 import CommentsSection from '../../components/Comments';
 import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
-import Ojojo1 from "../../assets/images/Ojojo1.jpg"
-import Ojojo2 from "../../assets/images/Ojojo2.jpg"
-import Ojojo3 from "../../assets/images/Ojojo3.jpg"
-import WaterYam from "../../assets/images/waterYam.jpg";
-import Onion from "../../assets/images/Onion.jpg";
-import Pepper from "../../assets/images/Pepper.jpg";
-import Crayfish from "../../assets/images/crayfish.jpg";
-import Salt from "../../assets/images/salt.jpg";
-import Cube from "../../assets/images/cube.png";
+import Amala1 from "../../assets/images/Amala1.jpg"
+import Amala2 from "../../assets/images/Amala2.jpg"
+import Amala3 from "../../assets/images/Amala3.jpg"
+import yamflour from "../../assets/images/yamflour.jpg";
+
 import Water from "../../assets/images/water.jpg";
-import Oil from "../../assets/images/oil.png";
 
 
 const Amala = () => {
@@ -26,9 +21,9 @@ const Amala = () => {
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    Ojojo1,
-    Ojojo2,
-    Ojojo3
+    Amala1,
+    Amala2,
+    Amala3,
   ];
 
   // Auto-scroll effect
@@ -63,22 +58,19 @@ const Amala = () => {
   ];
 
   const ingredients = [
-    { name: '½ medium-sized water yam ', amount: '225g', image: WaterYam },
-    { name: '1 small onion (chopped)', amount: '10g', image: Onion },
-    { name: '2 scotch bonnet peppers (ata rodo)', amount: '10g', image: Pepper, note: 'Grated' },
-    { name: '1 teaspoon ground crayfish(optional)', amount: '1 tsp', image: Crayfish },
-    { name: '½ teaspoon salt (to taste)', amount: '½ tsp', image: Salt, note: 'Sliced' },
-    { name: '½ teaspoon seasoning cube (optional)', amount: '½ tsp', image: Cube },
+    { name: '½ medium-sized water yam ', amount: '225g', image: yamflour },
     { name: '1 tablespoon water (if needed)', amount: '1 tsp', image: Water },
-    { name: 'Vegetable oil (for frying)', amount: '1 tsp', image: Oil },
+   
   ];
 
   const instructions = [
-    'Peel and grate the water yam. Use a grater with small holes to achieve a smooth consistency. Mix the ingredients and place the grated water yam in a bowl. ',
-    'Add chopped onions, scotch bonnet peppers, crayfish, salt, and seasoning cube. Stir well to combine. If the batter is too thick, add a little water for a softer consistency.',
-    ' into a deep pan and heat over medium heat, Scoop small portions of the batter using a spoon and carefully drop them into the hot oil. ',
-    'Fry until golden brown, flipping occasionally to ensure even cooking.Drain and serve',
-    'Remove the fritters and place them on a paper towel to drain excess oil.',
+    ' Amala is a dumpling made from the dried peels of yam. The yam peel is combined with dried cassava or plantain. The dried ingredients are blended to a flour called elubo. When the elubo is combined with boiling water and stirred on a stove, you get amala.',
+    'Amala pairs nicely with gbegiri, a beans sauce and stew with a bit of ewedu. Information from Africanfood.co.uk',
+    'Boil Water – Pour clean water into a pot and bring it to a boil.',
+    'Add Yam Flour Gradually – Reduce heat and slowly pour in yam flour while stirring continuously.',
+    'Mix Until Smooth – Use a wooden spatula (Orogun) to stir quickly to avoid lumps.',
+    'Cook for a Few Minutes – Keep stirring until it turns smooth, soft, and stretchy.',
+    'Serve Hot – Enjoy with soups like ewedu, gbegiri, or egusi.',
   ];
 
   return (
@@ -98,7 +90,7 @@ const Amala = () => {
         {/* Title + Rating + Buttons */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Ojojo( water yam fritters)</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Amala</h1>
             <div className="flex items-center bg-gray-100 px-2 py-1 rounded-full">
               <Star className="text-yellow-500" size={18} />
               <span className="ml-1 font-medium">4.5</span>

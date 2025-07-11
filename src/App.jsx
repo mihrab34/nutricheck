@@ -8,8 +8,9 @@ import AvocadoToast from './Pages/RecipeDetailPages/AvocadoToast'
 import GrilledSalmon from './Pages/RecipeDetailPages/GrilledSalmon'
 import Collections from './Pages/Collections'
 import Ojojo from './Pages/RecipeDetailPages/Ojojo'
-import EfoRiro from './Pages/RecipeDetailPages/efoRiro'
+
 import Amala from './Pages/RecipeDetailPages/Amala'
+import EfoRiro from './Pages/RecipeDetailPages/efoRiro'
 
 function App() {
   return (
