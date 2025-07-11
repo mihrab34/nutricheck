@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MegaMenu from './MegaMenu';
+import { ChevronDown } from 'lucide-react';
 
 // Import Google Fonts CSS
 const fontLink = document.createElement('link');
@@ -104,12 +105,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               item.hasMegaMenu ? (
-                <div
-                  key={item.name}
-                  className="relative"
-                  onMouseEnter={() => setIsMegaMenuOpen(true)}
-                  onMouseLeave={() => setIsMegaMenuOpen(false)}
-                >
+                <div key={item.name} className="relative flex items-center">
                   <Link
                     to={item.path}
                     onClick={() => handleNavClick(item.path)}
@@ -121,8 +117,27 @@ const Navbar = () => {
                   >
                     {item.name}
                   </Link>
-                  {/* Mega Menu */}
-                  <MegaMenu isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
+                  {/* Dropdown Icon */}
+                  <span
+                    className={`ml-1 cursor-pointer select-none text-lg flex items-center transition-colors ${isMegaMenuOpen ? 'text-purple-700' : 'text-gray-500 hover:text-purple-700'}`}
+                    onMouseEnter={() => setIsMegaMenuOpen(true)}
+                    onMouseLeave={() => setIsMegaMenuOpen(false)}
+                    onClick={() => setIsMegaMenuOpen((open) => !open)}
+                    tabIndex={0}
+                    onFocus={() => setIsMegaMenuOpen(true)}
+                    onBlur={() => setIsMegaMenuOpen(false)}
+                    aria-label="Show recipes mega menu"
+                  >
+                    <ChevronDown size={20} className={`transition-transform duration-200 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
+                  </span>
+                  {/* Mega Menu: only open when icon is hovered or clicked */}
+                  <div
+                    onMouseEnter={() => setIsMegaMenuOpen(true)}
+                    onMouseLeave={() => setIsMegaMenuOpen(false)}
+                    className="absolute left-1/2 top-full z-50"
+                  >
+                    <MegaMenu isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
+                  </div>
                 </div>
               ) : (
                 <div key={item.name} className="relative">
@@ -190,3 +205,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

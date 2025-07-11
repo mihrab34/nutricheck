@@ -4,8 +4,14 @@ import { Clock, Users, ChevronDown, ChevronUp, SlidersVertical, ChevronLeft, Che
 import CommentsSection from '../../components/Comments';
 import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
+import Ewedu1 from "../../assets/images/Ewedu1.jpg"
+import Ewedu2 from "../../assets/images/Ewedu2.jpg"
+import Ewedu3 from "../../assets/images/Ewedu3.jpg"
+import EweduLeaves from "../../assets/images/EweduLeaves.jpg";
+import Potash from "../../assets/images/Potash.jpg";
+import TapWater from "../../assets/images/TapWater.jpg"
 
-const GrilledSalmon = () => {
+const EweduRecipe = () => {
   const navigate = useNavigate();
   const [isNutritionalOpen, setIsNutritionalOpen] = useState(true);
   const [currentImage, setCurrentImage] = useState(0);
@@ -14,9 +20,9 @@ const GrilledSalmon = () => {
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png',
-    '/src/assets/images/Recipe.png'
+    Ewedu1,
+    Ewedu2,
+    Ewedu3,
   ];
 
   // Auto-scroll effect
@@ -51,21 +57,19 @@ const GrilledSalmon = () => {
   ];
 
   const ingredients = [
-    { name: 'Rice', amount: '225g', image: '/images/rice.png' },
-    { name: 'Olive Oil', amount: '60g', image: '/images/oil.png' },
-    { name: 'Cheese', amount: '300g', image: '/images/cheese.png', note: 'Grated' },
-    { name: 'Salt', amount: '1/2 tsp', image: '/images/salt.png' },
-    { name: 'Onion', amount: '4 Pieces', image: '/images/onion.png', note: 'Sliced' },
-    { name: 'Tomato', amount: '3 Pieces', image: '/images/tomato.png' },
-    { name: 'Red Pepper', amount: '1/2 tsp', image: '/images/pepper.png' },
+    { name: 'Ewedu leaves( jute leaves),', amount: '225g', image: EweduLeaves },
+    { name: 'Potash', amount: '½ tsp', image: Potash },
+    { name: 'water for mixing.', amount: '1 cup', image: TapWater },
+   
   ];
 
   const instructions = [
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
-    'Preheat oven to 200°C. Spray a 6–cup capacity (1.5l) ovenproof dish with oil. Steam potato slices in boiling water for about 10 minutes until just tender. Layer in dish with raw pumpkin and onion then pour milk over.',
+    'Rinse the ewedu leaves thoroughly and blend them with a small amount of water to create a smooth consistency.',
+    'Alternatively, chop the leaves finely. In a pot, boil water and add the blended or chopped ewedu.',
+    'Stir continuously until it starts to thicken. Add ground crayfish, locust beans, and seasoning, then continue stirring.',
+    'If using potash, dissolve a small quantity in water and add it to the soup for a more elastic texture.',
+    'Allow the soup to simmer for a few minutes before removing from heat.',
+    'Serve hot with amala and stew.',
   ];
 
   return (
@@ -85,7 +89,7 @@ const GrilledSalmon = () => {
         {/* Title + Rating + Buttons */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Grilled Salmon</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">Ewedu</h1>
             <div className="flex items-center bg-gray-100 px-2 py-1 rounded-full">
               <Star className="text-yellow-500" size={18} />
               <span className="ml-1 font-medium">4.5</span>
@@ -301,4 +305,4 @@ const GrilledSalmon = () => {
   );
 };
 
-export default GrilledSalmon;
+export default EweduRecipe;

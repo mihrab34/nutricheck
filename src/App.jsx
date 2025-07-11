@@ -3,15 +3,14 @@ import './App.css'
 import RootLayout from './layouts/RootLayout'
 import Landing from './Pages/Landing'
 import RecipesPage from './Pages/RecipesPage'
-import SpicyChickenWrap from './Pages/RecipeDetailPages/OgbonoSoup'
-import AvocadoToast from './Pages/RecipeDetailPages/OkroSoup'
-import GrilledSalmon from './Pages/RecipeDetailPages/GrilledSalmon'
 import Collections from './Pages/Collections'
 import Ojojo from './Pages/RecipeDetailPages/Ojojo'
 import Amala from './Pages/RecipeDetailPages/Amala'
 import RiroEfo from './Pages/RecipeDetailPages/RiroEfo'
 import OgbonoSoup from './Pages/RecipeDetailPages/OgbonoSoup'
 import OkroSoup from './Pages/RecipeDetailPages/OkroSoup'
+import EweduRecipe from './Pages/RecipeDetailPages/EweduRecipe'
+
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
             <Route path='/recipe/amala' element={<Amala />} />
             <Route path='/recipe/ogbono-soup' element={<OgbonoSoup />} />
             <Route path='/recipe/Ila-plain-Okro-soup' element={<OkroSoup />} />
-            <Route path='/recipe/grilled-salmon' element={<GrilledSalmon />} />
+            <Route path='/recipe/ewedu' element={<EweduRecipe />} />
           </Route>
         </Routes>
       </BrowserRouter>
