@@ -94,7 +94,7 @@ const recipes = [
     id: 9,
     slug: "ikokore",
     title: "ikokore",
-    image: ikokore,
+    image: Ikokore,
     time: "25 min",
     difficulty: "Easy",
     servings: 3,
