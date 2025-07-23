@@ -5,6 +5,7 @@ import Amala3 from "../assets/images/Amala3.jpg"
 import Ogbono1 from "../assets/images/Ogbono1.jpg"
 import Okro2 from "../assets/images/Okro2.jpg"
 import Ewedu3 from "../assets/images/Ewedu3.jpg"
+import Gbegiri1 from "../assets/images/Gbegiri1.jpg"
 import { Link } from "react-router-dom";
 
 const recipes = [
@@ -67,7 +68,17 @@ const recipes = [
     difficulty: "Easy",
     servings: 3,
     isFavorite: false
-  }
+  },
+  {
+    id: 7,
+    slug: "gbegiri",
+    title: "gbegiri",
+    image: Gbegiri1,
+    time: "25 min",
+    difficulty: "Easy",
+    servings: 3,
+    isFavorite: false
+  },
   // Add more recipes as needed
 ];
 
