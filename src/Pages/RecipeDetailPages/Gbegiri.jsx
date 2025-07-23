@@ -10,12 +10,11 @@ import Gbegiri3 from "../../assets/images/Gbegiri3.jpg"
 import Beans from "../../assets/images/Beans.jpg"
 import PalmOil from "../../assets/images/PalmOil.jpg";
 import Onion from "../../assets/images/Onion.jpg";
-import crayfish from "../../assets/images/Crayfish.jpg";
+import crayfish from "../../assets/images/crayfish.jpg";
 import pepper from "../../assets/images/Pepper.jpg";
 import locustBean from "../../assets/images/LocustBeans.jpg";
 import cube from "../../assets/images/cube.png"
 import salt from "../../assets/images/salt.jpg"
-import water from "../../assets/images/water.jpg"
 import CupOfWater from "../../assets/images/CupOfWater.jpg"
 
 const Gbegriri = () => {
