@@ -90,6 +90,16 @@ const recipes = [
     servings: 3,
     isFavorite: false
   },
+  {
+    id: 9,
+    slug: "ikokore",
+    title: "ikokore",
+    image: Asaro1,
+    time: "25 min",
+    difficulty: "Easy",
+    servings: 3,
+    isFavorite: false
+  },
   // Add more recipes as needed
 ];
 
