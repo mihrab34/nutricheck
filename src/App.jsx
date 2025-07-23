@@ -10,7 +10,7 @@ import RiroEfo from './Pages/RecipeDetailPages/RiroEfo'
 import OgbonoSoup from './Pages/RecipeDetailPages/OgbonoSoup'
 import OkroSoup from './Pages/RecipeDetailPages/OkroSoup'
 import EweduRecipe from './Pages/RecipeDetailPages/EweduRecipe'
-
+import Gbegriri from './Pages/RecipeDetailPages/Gbegiri'
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
             <Route path='/recipe/ogbono-soup' element={<OgbonoSoup />} />
             <Route path='/recipe/Ila-plain-Okro-soup' element={<OkroSoup />} />
             <Route path='/recipe/ewedu' element={<EweduRecipe />} />
+            <Route path='/recipe/gbegiri' element={<Gbegriri />} />
           </Route>
         </Routes>
       </BrowserRouter>
