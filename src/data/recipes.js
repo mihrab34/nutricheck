@@ -5,7 +5,7 @@ import Ogbono1 from "../assets/images/Ogbono1.jpg"
 import Okro2 from "../assets/images/Okro2.jpg"
 import Ewedu3 from "../assets/images/Ewedu3.jpg"
 import Gbegiri1 from "../assets/images/Gbegiri1.jpg"
-import ikokore from "../assets/images/ikokore.jpg"
+import Ikokore from "../assets/images/Ikokore.jpg"
 import Asaro1 from "../assets/images/Asaro1.jpg"
 import { Link } from "react-router-dom";
 
