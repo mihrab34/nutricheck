@@ -7,6 +7,7 @@ import Ewedu3 from "../assets/images/Ewedu3.jpg"
 import Gbegiri1 from "../assets/images/Gbegiri1.jpg"
 import Ikokore from "../assets/images/Ikokore.jpg"
 import Asaro1 from "../assets/images/Asaro1.jpg"
+import IlaAlasepo3 from "../assets/images/IlaAlasepo3.jpg"
 import { Link } from "react-router-dom";
 
 const recipes = [
@@ -95,6 +96,16 @@ const recipes = [
     slug: "ikokore",
     title: "ikokore",
     image: Ikokore,
+    time: "25 min",
+    difficulty: "Easy",
+    servings: 3,
+    isFavorite: false
+  },
+  {
+    id: 10,
+    slug: "ila-alasepo",
+    title: "ila alasepo",
+    image: IlaAlasepo3,
     time: "25 min",
     difficulty: "Easy",
     servings: 3,
