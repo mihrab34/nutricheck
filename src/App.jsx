@@ -13,6 +13,7 @@ import EweduRecipe from './Pages/RecipeDetailPages/EweduRecipe'
 import Gbegriri from './Pages/RecipeDetailPages/Gbegiri'
 import Asaro from './Pages/RecipeDetailPages/Asaro'
 import Ikokore from './Pages/RecipeDetailPages/Ikokore'
+import IlaAlasepo from './Pages/RecipeDetailPages/IlaAlasepo'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path='/recipe/gbegiri' element={<Gbegriri />} />
             <Route path='/recipe/asaro' element={<Asaro />} />
             <Route path='/recipe/ikokore' element={<Ikokore />} />
+            <Route path='/recipe/ila-alasepo' element={<IlaAlasepo />} />
           </Route>
         </Routes>
       </BrowserRouter>
