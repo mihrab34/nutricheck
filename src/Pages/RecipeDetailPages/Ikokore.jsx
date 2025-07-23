@@ -4,9 +4,9 @@ import { Clock, Users, ChevronDown, ChevronUp, SlidersVertical, ChevronLeft, Che
 import CommentsSection from '../../components/Comments';
 import UsersAlsoViewed from '../../components/UsersAlsoViewed';
 import RecipeSubscription from '../../components/RecipeSubscription';
-import Asaro1 from "../../assets/images/Asaro1.jpg"
-import Asaro2 from "../../assets/images/Asaro2.jpg"
-import Asaro3 from "../../assets/images/Asaro3.jpg"
+import Ikokore1 from "../../assets/images/Ikokore1.jpg"
+import Ikokore2 from "../../assets/images/Ikokore2.jpg"
+import Ikokore3 from "../../assets/images/Ikokore3.jpg"
 import waterYam from "../../assets/images/waterYam.jpg";
 import PalmOil from "../../assets/images/PalmOil.jpg";
 import crayfish from "../../assets/images/crayfish.jpg";
@@ -27,9 +27,9 @@ const Ikokore = () => {
   const toggleNutritionalPanel = () => setIsNutritionalOpen(!isNutritionalOpen);
   
   const images = [
-    Asaro1,
-    Asaro2,
-    Asaro3,
+    Ikokore1,
+    Ikokore2,
+    Ikokore3,
   ];
 
   // Auto-scroll effect
