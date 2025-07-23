@@ -12,7 +12,7 @@ import PalmOil from "../../assets/images/PalmOil.jpg";
 import Onion from "../../assets/images/Onion.jpg";
 import crayfish from "../../assets/images/crayfish.jpg";
 import pepper from "../../assets/images/Pepper.jpg";
-import locustBean from "../../assets/images/LocustBeans.jpg";
+import locustBean from "../../assets/images/locustBeans.jpg";
 import cube from "../../assets/images/cube.png"
 import salt from "../../assets/images/salt.jpg"
 import CupOfWater from "../../assets/images/CupOfWater.jpg"
