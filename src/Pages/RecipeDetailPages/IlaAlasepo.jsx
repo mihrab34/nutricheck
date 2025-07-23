@@ -9,7 +9,7 @@ import IlaAlasepo1 from "../../assets/images/IlaAlasepo1.jpg"
 import IlaAlasepo2 from "../../assets/images/IlaAlasepo2.jpg"
 import CupofOkro from "../../assets/images/CupofOkro.jpg"
 import PalmOil from "../../assets/images/PalmOil.jpg";
-import Meats from "../../assets/images/Meats.jpg";
+import meats from "../../assets/images/meats.jpg";
 import Pepper from "../../assets/images/Pepper.jpg";
 import TomatoPaste from "../../assets/images/TomatoPaste.jpg"
 import Onion from "../../assets/images/Onion.jpg"
@@ -66,7 +66,7 @@ const IlaAlasepo = () => {
 
   const ingredients = [
     { name: '2 tablespoons palm oil', amount: '2 tsp', image: PalmOil },
-    { name: ' 1 cup assorted meats and fish. ', amount: '2 cups', image: Meats },
+    { name: ' 1 cup assorted meats and fish. ', amount: '2 cups', image: meats },
     { name: '2 cups fresh okro (chopped or grated)', amount: '2 cups', image: CupofOkro },
     { name: '2 scotch bonnet peppers (blended)', amount: '2 cups', image: Pepper },
     { name: '1 medium tomato (blended)', amount: '1 Medium', image: TomatoPaste },
