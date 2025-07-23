@@ -11,6 +11,7 @@ import OgbonoSoup from './Pages/RecipeDetailPages/OgbonoSoup'
 import OkroSoup from './Pages/RecipeDetailPages/OkroSoup'
 import EweduRecipe from './Pages/RecipeDetailPages/EweduRecipe'
 import Gbegriri from './Pages/RecipeDetailPages/Gbegiri'
+import Asaro from './Pages/RecipeDetailPages/Asaro'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path='/recipe/Ila-plain-Okro-soup' element={<OkroSoup />} />
             <Route path='/recipe/ewedu' element={<EweduRecipe />} />
             <Route path='/recipe/gbegiri' element={<Gbegriri />} />
+            <Route path='/recipe/asaro' element={<Asaro />} />
           </Route>
         </Routes>
       </BrowserRouter>
